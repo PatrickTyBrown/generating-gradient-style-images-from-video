@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Image Generator</title>
+        <script type='text/javascript' src='/eel.js'></script>
+        <script type='text/javascript'>
+        </script>
+    </head>
+    
+    <body>
+        <div>
+            <label for="file_input">Choose the file or directory you wish to use:</label>
+            <input type="file" id="file_input">
+            <h6><i>Files Will Need to be in the project Directory or Subdirectory</i></h6>
+        </div>
+        
+        <div>
+            <span>
+                <label for="style_input">Select the style of generation:</label>
+                <select name="styles" id="style_input">
+                    <option value="single" selected>Single Color</option>
+                    <option value="multi">Multiple Color</option>
+                </select>
+
+                <label for="method_input">Select the method of color generation:</label>
+                <select name="method" id="method_input">
+                    <option value="mean" selected>Average</option>
+                    <option value="median">Median</option>
+                    <option value="none">None</option>
+                </select>
+            </span>
+        </div>
+
+        
+
+        <div>
+            <h3>Result Size</h3>
+            <span>
+                <input type="radio" name="size_choice" id="default_size" checked>Default</input>
+                <input type="radio" name="size_choice" id="source_size">Same as source</input>
+                <input type="radio" name="size_choice" id="custom_size">Custom</input>
+            </span>
+            <div>
+                <label for="x_size">X Axis:</label>
+                <input type="number" id="x_size" disabled>
+                <label for="y_size">Y Axis:</label>
+                <input type="number" id="y_size" disabled>
+            </div>
+            
+        </div>
+
+        <span>
+            <button id="cancel_button">Cancel</button>
+            <button id="submit_button" disabled>Submit</button>
+        </span>
+
+
+        <script src="./script.js"></script>
+    </body>
+</html>
